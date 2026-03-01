@@ -1,1 +1,97 @@
+Запрос:
+GET
+https://
+api.petrushka-green.ru/api/v1/partner-stores?lat=54.6454&lng=48.4289&date=2026-02-24
 
+Заголовки:
+Authorization: Bearer <access_token>
+Content-Type: application/json
+Accept: application/json
+
+
+Ответ:
+json
+{
+  "status": "success",
+  "data": {
+    "screen": {
+      "title": "Выберите магазин",
+      "navigation": {
+        "back_button": true,
+        "back_action": "pop"
+      }
+    },
+    "stores": [
+      {
+        "id": "metro-001",
+        "name": "METRO",
+        "icon_url": "https://cdn.petrushka-green.ru/icons/partners/metro.png",
+        "delivery": {
+          "type": "scheduled",
+          "label": "Ближайшая доставка",
+          "time_range": {
+            "start": "21:00",
+            "end": "23:00",
+            "display": "21:00-23:00"
+          },
+          "available": true
+        },
+        "external_url": "https://www.metro-cc.ru/?utm_source=petrushka&utm_medium=app"
+      },
+      {
+        "id": "ashan-002",
+        "name": "Ашан",
+        "icon_url": "https://cdn.petrushka-green.ru/icons/partners/ashan.png",
+        "delivery": {
+          "type": "scheduled",
+          "label": "Ближайшая доставка",
+          "time_range": {
+            "start": "18:00",
+            "end": "20:00",
+            "display": "18:00-20:00"
+          },
+          "available": true
+        },
+        "external_url": "https://www.auchan.ru/?utm_source=petrushka&utm_medium=app"
+      },
+      {
+        "id": "victoria-003",
+        "name": "Виктория",
+        "icon_url": "https://cdn.petrushka-green.ru/icons/partners/victoria.png",
+        "delivery": {
+          "type": "scheduled",
+          "label": "Ближайшая доставка",
+          "time_range": {
+            "start": "17:00",
+            "end": "19:00",
+            "display": "17:00-19:00"
+          },
+          "available": true
+        },
+        "external_url": "https://www.victoria.ru/?utm_source=petrushka&utm_medium=app"
+      },
+      {
+        "id": "vkusvill-004",
+        "name": "ВкусВилл",
+        "icon_url": "https://cdn.petrushka-green.ru/icons/partners/vkusvill.png",
+        "delivery": {
+          "type": "express",
+          "label": "Быстрая доставка",
+          "time_range": {
+            "min_minutes": 20,
+            "max_minutes": 60,
+            "display": "от 20 до 60 минут"
+          },
+          "available": true,
+          "cutoff_time": "23:00"
+        },
+        "external_url": "https://vkusvill.ru/?utm_source=petrushka&utm_medium=app"
+      }
+    ],
+    "meta": {
+      "date": "2026-02-24",
+      "total_stores": 4,
+      "last_updated": "2026-02-23T08:00:00Z"
+    }
+  }
+}
